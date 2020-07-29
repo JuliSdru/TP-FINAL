@@ -1,0 +1,185 @@
+/* You can add global styles to this file, and also import other style files */
+html { background-color: black; }
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.login-page {
+  padding: 5% 0 1%;
+  /* background: rgb(0, 0, 0); */
+  /* background: radial-gradient(circle, rgb(118, 87, 138) 0%, rgb(73, 26, 107) 40%, rgba(0,0,0,1) 100%); */
+}
+
+.image{
+    height: 150px;
+    border-radius: 20px;
+}
+
+.table{
+  width: fit-content;
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #db0404;
+  max-width: 350px;
+  margin: 0 auto 100px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border-radius: 5px;
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #65d1fcce;
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #65d1fcce;
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.form .cuentas{
+  width: 30%;
+}
+
+.form button:hover,.form button:active,.form button:focus {
+  background: #aa0101;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: rgb(139, 170, 206);
+  text-decoration: underline;
+}
+
+body {
+  background-image: url('assets/fondo.jpg');
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  text-align:center;
+  background-color: rgb(48, 48, 48);
+  height: 100%;
+}
+
+html{
+  height: 100%;
+}
+
+p{
+  color: rgb(0, 0, 0);
+}
+
+h4{
+  color: rgb(49, 185, 101);
+  margin-top: 10%;
+  text-align: center;
+}
+select
+{
+  background: #65d1fcce;
+}
+
+
+
+
+
+/****************SPINNER***************/
+ .trinity-rings-spinner, .trinity-rings-spinner * {
+  box-sizing: border-box;
+}
+
+.trinity-rings-spinner {
+  height: 115px;
+  width: 115px;
+  margin-left: 380%;
+  margin-top: -48px;
+  margin-bottom: -18px;
+  align-items: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.trinity-rings-spinner .circle {
+  position: absolute;;
+  display:block;
+  border: 3px solid #aa0101;
+  opacity: 1;
+}
+
+.trinity-rings-spinner .circle:nth-child(1) {
+  height: 5px;
+  width: 5px;
+  left: 140px;
+  animation : trinity-rings-spinner-circle1-animation 0.25s infinite;
+  border-width: 3px;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.trinity-rings-spinner .circle:nth-child(2) {
+  height: 5px;
+  width: 5px;
+  left: 150px;
+  animation : trinity-rings-spinner-circle2-animation 0.50s infinite;
+  border-width: 3px;
+  -webkit-animation-duration: 0.50s;
+  animation-duration: 0.50s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.trinity-rings-spinner .circle:nth-child(3) {
+  height: 5px;
+  width: 5px;
+  left: 160px;
+  animation : trinity-rings-spinner-circle3-animation 0.75s infinite;
+  border-width: 3px;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes trinity-rings-spinner-circle1-animation{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes trinity-rings-spinner-circle2-animation{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes trinity-rings-spinner-circle3-animation{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+

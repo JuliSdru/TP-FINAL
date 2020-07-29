@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<div class="login-page">
+    <div class="formm">
+        <form class="login-form">
+            <b style="font-size: larger;"><i>DISPONIBILIDAD DE CONSULTORIOS</i></b>
+            <br>
+            <br>
+<!-- <table class="table" id="tablaTurn" style="background-color: rgb(94, 110, 156);color:white"> -->
+    <table class="table table-striped table-bordered table-hover table-dark" style="color:black; position: relative; width: 800px; left: 80px;">
+    <thead>
+        <tr>
+            <th>CONSULTORIO</th>
+            <th>DISPONIBILIDAD</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sala of salas">
+            <td>{{sala.num}}</td>
+            <td><img src="{{sala.disp | libre}}" style="height: 30px;"></td>
+        </tr>
+    </tbody>
+</table>

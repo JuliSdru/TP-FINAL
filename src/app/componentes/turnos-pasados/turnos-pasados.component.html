@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+
+<div class="login-page">
+  <div class="formm">
+      <form class="login-form">
+          <b style="font-size: larger;"><i>TURNOS CUMPLIDOS</i></b>
+          <br>
+          <br>
+<!-- <table class="table" id="tablaAutos" style="background-color: rgb(94, 110, 156);color:white"> -->
+  <table class="table table-striped table-bordered table-hover table-dark" style="color:black; position: relative; width: 800px; left: 80px;">
+  <thead>
+    <tr>
+      <th>FECHA DEL TURNO</th>
+      <th>ESPECIALISTA</th>
+      <th>ENCUESTA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let turno of turnos">
+      <td>{{turno.fecha}}</td>
+      <td>{{turno.especialista}}</td>
+      <td>
+        <ng-container *ngIf="turno.entrevista"><img src="{{'Usted ya envio una reseña.' | enviado}}" style="height: 30px;"></ng-container>
+        <ng-container *ngIf="!turno.entrevista"><button class="btn btn-info" (click)="turnoEncuenta = turno; cerrarAca = false " style="background-color: red; color: black; border: black;">ENCUESTA</button></ng-container>
+        </td>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+  <app-entrevista [turno]="turnoEncuenta" [cerrar]="cerrarAca"></app-entrevista>
+</div>
+
+      </form>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="login-page">
+    <div class="form">
+        <h2><i><b>Registrese!</b></i></h2>
+        <img src="https://media.giphy.com/media/KDPzIXE84j9SIBi9CP/giphy.gif" class="image">
+        <br>
+        <br>
+        <form class="login-form">
+            <input type="mail" placeholder="Email" [(ngModel)]="cliente.email" name="cliente.email" />
+            <input type="text" placeholder="Nombre" [(ngModel)]="cliente.nombre" name="cliente.nombre" />
+            <input type="password" placeholder="Contraseña" [(ngModel)]="cliente.contrasenia" name="cliente.contrasenia" />
+            <input *ngIf="cliente.email" type="file" value="Subir foto" (change)="subirFoto($event)">
+            <p>{{message}}</p>
+            <div *ngIf="spinner">
+                <div class="col-md-2 loader5 bg-green-grd">
+                    <div class="trinity-rings-spinner">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <re-captcha (resolved)="resolved($event)" siteKey="6LdcXAAVAAAAAHxGowz5uvLwIFdjXXyUBfkoxTuy"></re-captcha>
+            <button *ngIf="todoOk" type="button" (click)="register()">Registrarse</button>
+            <p class="message">Si ya tiene una cuenta... <a href="login">Ingrese</a></p>
+        </form>
+    </div>
+</div>

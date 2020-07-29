@@ -1,0 +1,39 @@
+<div class="login-page">
+    <div class="form">
+        <h2><i><b>Bienvenido!</b></i></h2>
+        <!-- <img src="https://media.giphy.com/media/KDPzIXE84j9SIBi9CP/giphy.gif" class="image"> -->
+        <img src="https://media.giphy.com/media/SqqtxIRWdlSddmIE2U/giphy.gif" class="image">
+        <br><br>
+        <form class="login-form">
+            <input type="text" placeholder="Email" [(ngModel)]="mail" name="mail" />
+            <input type="password" placeholder="Contraseña" [(ngModel)]="password" name="password" />
+            <p>{{message}}</p>
+            <div *ngIf="spinner">
+                <div class="col-md-2 loader5 bg-green-grd">
+                    <div class="trinity-rings-spinner">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- <re-captcha (resolved)="resolved($event)" siteKey="6LdcXAAVAAAAAHxGowz5uvLwIFdjXXyUBfkoxTuy"></re-captcha> -->
+            <br>
+            <button type="button" (click)="logIn()">Ingresar</button>
+            <br>
+            <br>
+            <select class="browser-default custom-select" value="" #C (click)="selecCuenta(C.value)">
+                <option disabled selected>Seleccionar cuenta</option>
+                <option value="adm">Administrador</option>
+                <option value="cli1">Cliente Prueba</option>
+                <option value="cli2">Cliente Test</option>
+                <option value="rec">Recepcionista</option>
+                <option value="es1">Especialista Rodriguez</option>
+                <option value="es2">Especialista Airoldi</option>
+            </select>
+            <br>
+            <p class="message">Si no esta registrado... <a href="/register">Cree una cuenta</a></p>
+        </form>
+    </div>
+
+</div>

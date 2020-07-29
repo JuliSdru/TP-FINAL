@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+
+<div class="login-page">
+    <div class="formm">
+        <form class="login-form">
+            <b style="font-size: larger;"><i>SESIONES INICIADAS POR EMPLEADOS</i></b>
+            <br>
+            <br>
+<!-- <table class="table" id="tablaTurn" style="color:black; left: 280px; position: relative;"> -->
+    <table class="table table-striped table-bordered table-hover table-dark" style="color:black; position: relative; width: 800px; left: 80px;">
+    <thead>
+        <tr>
+            <th>EMPLEADO</th>
+            <th>DÍA / HORARIO</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let sesion of sesiones">
+            <td>{{sesion.mail}}</td>
+            <td>{{sesion.today.toDate() | date: 'short'}}</td>
+        </tr>
+    </tbody>
+</table>
+        </form>
+    </div>
+</div>

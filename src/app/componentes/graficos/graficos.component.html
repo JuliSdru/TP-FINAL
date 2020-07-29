@@ -1,0 +1,27 @@
+
+
+  <app-navbar></app-navbar>
+ 
+  <div class="alert alert-info">Para obtener el grafico de cada especialista seleccione sobre su nombre</div>
+    <div class="formm">
+
+     
+          <div style="width: 100%;">
+            <div style="display: block">
+              <canvas baseChart
+                      [datasets]="[
+                      {data: [this.esp1], label: 'Especilista 1'},
+                      {data: [this.esp2], label: 'Especilista 2'}
+                    ]"
+                    [labels]="barChartLabels"
+                    [options]="barChartOptions"
+                    [plugins]="barChartPlugins"
+                    [legend]="barChartLegend"
+                    [chartType]="barChartType">
+                
+              </canvas>
+            </div>
+          </div> 
+     
+
+</div>

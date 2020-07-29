@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="login-page">
+    <div class="formm">
+        <form class="login-form">
+            <b style="font-size: larger;"><i>TURNOS VIGENTES</i></b>
+            <br>
+            <br>
+<!-- <table class="table" id="tablaAutos" style="background-color: rgb(94, 110, 156);color:white"> -->
+    <table class="table table-striped table-bordered table-hover table-dark" style="color:black; position: relative; width: 800px; left: 80px;">
+    <thead>
+        <tr>
+            <th>FECHA DEL TURNO</th>
+            <th>PACIENTE</th>
+            <th>ESPECIALISTA</th>
+            <th>CANCELAR</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let turno of turnos">
+                <td>{{turno.fecha}}</td>
+                <td>{{turno.cliente}}</td>
+                <td>{{turno.especialista}}</td>
+                <td><button class="btn btn-danger" (click)="cancelarTurno(turno)">CANCELAR</button></td>
+        </tr>
+    </tbody>
+</table>
+        </form>
+    </div>
+</div>

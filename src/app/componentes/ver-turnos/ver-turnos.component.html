@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<div class="login-page">
+    <div class="formm">
+        <form class="login-form">
+            <b style="font-size: larger;"><i>TURNOS VIGENTES</i></b>
+            <br>
+            <br>
+<!-- <table class="table" id="tablaTurn" style="background-color: rgb(94, 110, 156);color:white"> -->
+    <table class="table table-striped table-bordered table-hover table-dark" style="color:black; position: relative; width: 800px; left: 80px;">
+    <thead>
+        <tr>
+            <th>FECHA DEL TURNO</th>
+            <th>ESPECIALISTA</th>
+            <th>CONSULTORIO</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let turno of turnos">
+            <!-- <ng-container *ngIf="turno.cliente == {{email}}"> -->
+                <td>{{turno.fecha}}</td>
+                <td>{{turno.especialista}}</td>
+                <td>{{turno.sala}}</td>
+            <!-- </ng-container> -->
+        </tr>
+    </tbody>
+</table>
+
+
+<app-descargas [tabla]="turnos"></app-descargas>
+
+</form>
+</div>
+</div>

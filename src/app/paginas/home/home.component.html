@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+
+<!-- <div class="alert alert-primary" role="alert">
+  This is a primary alert—check it out!
+</div> -->
+
+<div class="login-page">
+<div class="formm">
+<div class="menu-siguser">
+  <img src="{{foto}}" style="height: 65px;">
+    <br>
+    <i><b>•Sesion iniciada como:</b></i> {{nombre}}
+    <br>
+    <i><b>•Email:</b></i> {{email}}
+</div>
+</div>
+</div>
+
+
+
+<!-- si es cliente -->
+<div *ngIf="home === 'cl'" style="text-align: center;">
+  <button type="button" (click)="sacarTurno()" class="botonAdministrador">SACAR TURNO</button>
+  <br>
+  <br>
+  <button type="button" (click)="verTurnos()" class="botonAdministrador">VER TURNOS</button>
+  <br>
+  <br>
+  <button type="button" (click)="turnosPasados()" class="botonAdministrador">TURNOS CUMPLIDOS</button>
+</div>
+
+<!-- si es especialista -->
+<div *ngIf="home === 'esp'">
+  <button type="button" (click)="verTurnosE()" class="botonAdministrador">TURNOS VIGENTES ESPECIALISTA</button>
+</div>
+
+<!-- si es recepcionista -->
+<div *ngIf="home === 'rec'">
+  <button type="button" (click)="sacarTurnosR()" class="botonAdministrador">SACAR TURNO RECEPCIONISTA</button>
+  <br>
+  <br>
+  <button type="button" (click)="turnosVigenteR()" class="botonAdministrador">TURNOS VIGENTES RECEPCIONISTA</button>
+  <br>
+  <br>
+  <button type="button" (click)="verSalas()" class="botonAdministrador">SALAS DISPONIBLES</button>
+</div>
+
+<!-- si es administrador -->
+
+<div *ngIf="home === 'adm'">
+  <button type="button" (click)="sesiones()" class="botonAdministrador">SESIONES INICIDAS</button>
+  <br>
+  <br>
+  <button type="button" (click)="registrarA()" class="botonAdministrador">DAR DE ALTA</button>
+  <br>
+  <br>
+  <button type="button" (click)="graficos()" class="botonAdministrador">GRAFICOS</button>
+</div>
